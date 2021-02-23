@@ -1,4 +1,5 @@
 import numpy as np
+np.random.seed(42)
 
 # these are from the solutions from Piazza
 
@@ -64,6 +65,9 @@ def train_model(M, N, K, eta, reg, Y, eps=0.0001, max_epochs=300):
     Returns a tuple (U, V, err) consisting of U, V, and the unregularized MSE
     of the model.
     """
+    
+    np.random.seed(42)
+    
     # Initialize U, V  
     U = np.random.random((M,K)) - 0.5
     V = np.random.random((K,N)) - 0.5
